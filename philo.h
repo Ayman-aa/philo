@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philo.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aaamam <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/19 00:09:50 by aaamam            #+#    #+#             */
+/*   Updated: 2024/04/19 00:09:51 by aaamam           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHILO_H
 # define PHILO_H
 
@@ -72,7 +84,7 @@ int		_isdigit(char c);
 bool	is_digit(char **av);
 long	get_time(void);
 void	print(t_philo *philo, char *s);
-int	ft_usleep(size_t milliseconds);
+int		ft_usleep(size_t milliseconds);
 
 // init functions
 bool	init_args(t_args *args, char **av, int ac);
