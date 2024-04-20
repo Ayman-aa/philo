@@ -18,16 +18,17 @@ int	ft_usleep(size_t milliseconds)
 
 int	error(void)
 {
-	printf("\033[1;33m");
-	printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n");
-	printf("┃            Please enter 4 or 5 arguments      ┃\n");
-	printf("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n");
-	printf("┃             [\033[1;36m1\033[1;33m] Number of philosophers\n");
-	printf("┃             [\033[1;36m2\033[1;33m] Time to die\n");
-	printf("┃             [\033[1;36m3\033[1;33m] Time to eat\n");
-	printf("┃             [\033[1;36m4\033[1;33m] Time to sleep\n");
-	printf("┃             [\033[1;36m5\033[1;33m] Number of meals\n");
-	printf("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m\n");
+    printf("\033[1;91m");
+    printf("┌──────────────────────────────────────────┐\n");
+    printf("│       \033[1;97mInvalid Number of Arguments\033[1;91m        │\n");
+    printf("├──────────────────────────────────────────┤\n");
+    printf("│ 1. Number of philosophers                │\n");
+    printf("│ 2. Time to die                           │\n");
+    printf("│ 3. Time to eat                           │\n");
+    printf("│ 4. Time to sleep                         │\n");
+    printf("│ 5. Number of meals (optional)            │\n");
+    printf("└──────────────────────────────────────────┘\033[0m\n"); 
+
 	return (0);
 }
 

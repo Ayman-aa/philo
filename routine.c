@@ -3,7 +3,7 @@
 void	eating(t_philo *philo)
 {
 	pthread_mutex_lock(philo->r_fork);
-	print(philo, "has taken a fork");
+	print(philo, "has taken a right fork");
 	if (philo->philos_num == 1)
 	{
 		ft_usleep(philo->phil_death_time);
@@ -11,7 +11,7 @@ void	eating(t_philo *philo)
 		return ;
 	}
 	pthread_mutex_lock(philo->l_fork);
-	print(philo, "has taken a fork");
+	print(philo, "has taken a left fork");
 	philo->eating = 1;
 	print(philo, "is eating");
 	pthread_mutex_lock(philo->meal_lock);

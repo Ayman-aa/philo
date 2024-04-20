@@ -47,6 +47,7 @@ int	check_death(t_philo *philos)
 	return (0);
 }
 
+
 int	eat_times(t_philo *philo)
 {
 	int	i;

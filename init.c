@@ -27,6 +27,7 @@ bool	init_args(t_args *args, char **av, int ac)
 	return (true);
 }
 
+
 void	init_forks(pthread_mutex_t *forks, int philo_num)
 {
 	int	i;
@@ -36,6 +37,8 @@ void	init_forks(pthread_mutex_t *forks, int philo_num)
 		pthread_mutex_init(&forks[i++], NULL);
 }
 
+
+
 void	helper(int i, t_philo *philos, t_args *args, pthread_mutex_t *forks)
 {
 	philos[i].eating_count = 0;
@@ -44,6 +47,7 @@ void	helper(int i, t_philo *philos, t_args *args, pthread_mutex_t *forks)
 	else
 		philos[i].r_fork = &forks[i - 1];
 }
+
 
 bool	init_philos(t_args *args, t_philo *philos,
 					t_prog *prog, pthread_mutex_t *forks)
