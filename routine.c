@@ -17,9 +17,11 @@ void	eating(t_philo *philo)
 	pthread_mutex_lock(philo->meal_lock);
 	philo->last_meal = get_time();
 	philo->eating_count++;
+	print(philo, "is done eating");
 	pthread_mutex_unlock(philo->meal_lock);
 	ft_usleep(philo->phil_eat_time);
 	philo->eating = 0;
+	print(philo, "put the forks back");
 	pthread_mutex_unlock(philo->r_fork);
 	pthread_mutex_unlock(philo->l_fork);
 }
@@ -51,7 +53,7 @@ void	*philo_life(void *philo)
 	p = (t_philo *)philo;
 	if (p->id % 2 == 0)
 		ft_usleep(1);
-	while (!dead_monitor(p))
+	while (!dead_monitor(p)) // while true (false * 0 = true)
 	{
 		eating(p);
 		sleeping(p);
