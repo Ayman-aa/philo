@@ -13,9 +13,6 @@ int	destroy_all(char *mssg, t_prog *prog,
 	pthread_mutex_destroy(&prog->write_lock);
 	while (++i < philo[0].philos_num)
 		pthread_mutex_destroy(&forks[i]);
-	i = 0;
-	while (i < philo->philos_num)
-		pthread_detach(philo[i++].thread);
 	return (1);
 }
 
